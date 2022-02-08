@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#90000000">
+
+    <Button
+        android:id="@+id/btnrencana"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/btncustom2"
+        android:text="Buat Rencana Kerja"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:textSize="14sp"/>
+
+    <Button
+        android:id="@+id/btnhasil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_below="@id/btnrencana"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/btncustom2"
+        android:text="Buat Hasil Kerja"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:textSize="14sp"/>
+
+
+</RelativeLayout>

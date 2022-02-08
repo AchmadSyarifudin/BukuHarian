@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    card_view:cardCornerRadius="10dp"
+    card_view:cardUseCompatPadding="true">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/uraian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="3dp"
+            android:text="Rencana kerja 1"
+            android:textColor="#000"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/Judul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/uraian"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="3dp"
+            android:text="Hasil Kerja"
+            android:textColor="#0000ff"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/task"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Judul"
+            android:layout_marginLeft="5dp"
+            android:text="Doa bersama"
+            android:textColor="#000"
+            android:textSize="16dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/jamm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/task"
+            android:layout_marginLeft="5dp"
+            android:text="Jam Mulai: "
+            android:textColor="#000000"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/jam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/task"
+            android:layout_marginRight="3dp"
+            android:layout_toRightOf="@id/jamm"
+            android:text="1500"
+            android:textColor="#000"
+            android:textSize="15dp" />
+
+
+        <TextView
+            android:id="@+id/hasl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/jam"
+            android:textColor="#000"
+            android:textSize="15dp"
+            android:text="Presentase : "
+            android:layout_marginLeft="5dp" />
+
+        <TextView
+            android:id="@+id/hasil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/jam"
+            android:layout_marginRight="3dp"
+            android:layout_toRightOf="@id/hasl"
+            android:text="100%"
+            android:textColor="#000"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/jml"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/jam"
+            android:layout_toRightOf="@id/hasil"
+            android:textColor="#000"
+            android:textSize="15dp"
+            android:text="Jumlah : "
+            android:layout_marginLeft="5dp" />
+
+        <TextView
+            android:id="@+id/jumlah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/jam"
+            android:layout_toRightOf="@id/jml"
+            android:layout_marginRight="3dp"
+            android:text="1500"
+            android:textColor="#000"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/ket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/jumlah"
+            android:textColor="#000"
+            android:textSize="15dp"
+            android:text="Keterangan : "
+            android:layout_marginLeft="5dp" />
+
+        <TextView
+            android:id="@+id/keterangan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/jumlah"
+            android:layout_marginRight="3dp"
+            android:layout_toRightOf="@id/ket"
+            android:text="jhgfjgvkyvjhvbu"
+            android:textColor="#000"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/disposis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/keterangan"
+            android:textColor="#000"
+            android:textSize="15dp"
+            android:text="Disposisi : "
+            android:layout_marginLeft="5dp" />
+
+        <TextView
+            android:id="@+id/disposisi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/keterangan"
+            android:layout_marginRight="3dp"
+            android:layout_toRightOf="@id/disposis"
+            android:text="qwertytyu"
+            android:textColor="#000"
+            android:textSize="15dp" />
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

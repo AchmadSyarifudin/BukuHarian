@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Temp/BukuHarian/app/src/main/res/drawable-v24/relative_bg.xml" value="0.1111111111111111" />
+        <entry key="..\:/Temp/BukuHarian/app/src/main/res/drawable/btncustom.xml" value="0.1111111111111111" />
+        <entry key="..\:/Temp/BukuHarian/app/src/main/res/drawable/btncustom2.xml" value="0.1111111111111111" />
+        <entry key="..\:/Temp/BukuHarian/app/src/main/res/drawable/gradient.xml" value="0.1111111111111111" />
+        <entry key="..\:/Temp/BukuHarian/app/src/main/res/drawable/login_profil.xml" value="0.1111111111111111" />
+        <entry key="..\:/Temp/BukuHarian/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
+        <entry key="..\:/Temp/BukuHarian/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Temp/BukuHarian/app/src/main/res/layout/activity_main2.xml" value="0.22" />
+        <entry key="..\:/Temp/BukuHarian/app/src/main/res/layout/form_insert_rencana.xml" value="0.20416666666666666" />
+        <entry key="..\:/Temp/BukuHarian/app/src/main/res/layout/form_master_rencana.xml" value="0.20416666666666666" />
+        <entry key="..\:/Temp/BukuHarian/app/src/main/res/layout/list_hasil_activity.xml" value="0.20416666666666666" />
+        <entry key="..\:/Temp/BukuHarian/app/src/main/res/layout/list_rencana_activity.xml" value="0.20416666666666666" />
+        <entry key="..\:/Temp/BukuHarian/app/src/main/res/layout/list_rencana_hasil_activity.xml" value="0.33" />
+        <entry key="..\:/Users/achma/AndroidStudioProjects/BukuHarian/app/src/main/res/layout/activity_login.xml" value="0.19746376811594202" />
+        <entry key="..\:/Users/achma/AndroidStudioProjects/BukuHarian/app/src/main/res/layout/activity_main.xml" value="0.19010416666666666" />
+        <entry key="..\:/Users/achma/AndroidStudioProjects/BukuHarian/app/src/main/res/layout/activity_main2.xml" value="0.1852355072463768" />
+        <entry key="..\:/Users/achma/AndroidStudioProjects/BukuHarian/app/src/main/res/layout/activity_splash.xml" value="0.1" />
+        <entry key="..\:/Users/achma/AndroidStudioProjects/BukuHarian/app/src/main/res/layout/form_master_rencana.xml" value="0.19746376811594202" />
+        <entry key="..\:/Users/achma/AndroidStudioProjects/BukuHarian/app/src/main/res/layout/list_rencana_hasil_activity.xml" value="0.5" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

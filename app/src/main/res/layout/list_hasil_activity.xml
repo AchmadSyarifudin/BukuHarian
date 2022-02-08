@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    card_view:cardCornerRadius="10dp"
+    card_view:cardUseCompatPadding="true">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/jamm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            android:text="Jam : "
+            android:layout_marginLeft="5dp" />
+
+        <TextView
+            android:id="@+id/jam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/jamm"
+            android:textColor="#000"
+            android:textSize="15dp"
+            android:text="1500"
+            android:layout_marginRight="3dp" />
+
+
+        <TextView
+            android:id="@+id/hasl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/jam"
+            android:textColor="#000"
+            android:textSize="15dp"
+            android:text="Hasil Kerja : "
+            android:layout_marginLeft="5dp" />
+
+        <TextView
+            android:id="@+id/hasil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/jam"
+            android:layout_toRightOf="@id/hasl"
+            android:textColor="#000"
+            android:textSize="15dp"
+            android:text="1500"
+            android:layout_marginRight="3dp" />
+
+        <TextView
+            android:id="@+id/jml"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hasil"
+            android:textColor="#000"
+            android:textSize="15dp"
+            android:text="Jumlah : "
+            android:layout_marginLeft="5dp" />
+
+        <TextView
+            android:id="@+id/jumlah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hasil"
+            android:layout_toRightOf="@id/jml"
+            android:textColor="#000"
+            android:textSize="15dp"
+            android:text="1500"
+            android:layout_marginRight="3dp" />
+
+        <TextView
+            android:id="@+id/satuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hasil"
+            android:layout_toRightOf="@id/jumlah"
+            android:textColor="#000"
+            android:textSize="15dp"
+            android:text="Pcs"
+            android:layout_marginRight="3dp" />
+
+        <TextView
+            android:id="@+id/ket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/satuan"
+            android:textColor="#000"
+            android:textSize="15dp"
+            android:text="Keterangan : "
+            android:layout_marginLeft="5dp" />
+
+        <TextView
+            android:id="@+id/keterangan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/satuan"
+            android:layout_toRightOf="@id/ket"
+            android:textColor="#000"
+            android:textSize="15dp"
+            android:text="jhgfjgvkyvjhvbu"
+            android:layout_marginRight="3dp" />
+
+        <TextView
+            android:id="@+id/disposis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/keterangan"
+            android:textColor="#000"
+            android:textSize="15dp"
+            android:text="Disposisi : "
+            android:layout_marginLeft="5dp" />
+
+        <TextView
+            android:id="@+id/disposisi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/keterangan"
+            android:layout_toRightOf="@id/disposis"
+            android:textColor="#000"
+            android:textSize="15dp"
+            android:text="qwertytyu"
+            android:layout_marginRight="3dp" />
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

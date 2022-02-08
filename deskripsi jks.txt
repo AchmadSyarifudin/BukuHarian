@@ -1,0 +1,10 @@
+path : C:\Users\achma\AndroidStudioProjects\fuboru2020\signedapk.jks
+password : fuboru
+Alias : fuboru
+password : fuboru
+first and last name : fuboru
+organizational unit : motorcycle part
+organization : fuboru
+city : sidoarjo
+province : east java
+country code : +62

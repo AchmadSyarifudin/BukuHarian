@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#90000000">
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvkode"-->
+<!--        android:layout_width="100dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Kode"-->
+<!--        android:textColor="#ffffff"-->
+<!--        android:textSize="18sp"-->
+<!--        android:textStyle="bold"/>-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/edkode"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginLeft="16dp"-->
+<!--        android:layout_toRightOf="@id/tvkode"-->
+<!--        android:background="#FFFF00"-->
+<!--        android:enabled="false"-->
+<!--        android:paddingLeft="10dp"-->
+<!--        android:text=""-->
+<!--        android:textColor="#000"-->
+<!--        android:textSize="18sp"-->
+<!--        android:textStyle="bold" />-->
+
+    <TextView
+        android:id="@+id/tvnamax"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="Nama"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tvnama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@id/tvnamax"
+        android:background="#FFFFFF"
+        android:paddingLeft="10dp"
+        android:text="Achmad Syarifudin"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvbagianx"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvnama"
+        android:layout_marginTop="3dp"
+        android:text="Bagian"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tvbagian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_below="@id/tvnama"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@id/tvnamax"
+        android:background="#FFFFFF"
+        android:paddingLeft="10dp"
+        android:text="EDP"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvtanggalx"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvbagian"
+        android:layout_marginTop="3dp"
+        android:text="Tanggal"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tvtanggal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_below="@id/tvbagian"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@id/tvnamax"
+        android:background="#FFFFFF"
+        android:paddingLeft="10dp"
+        android:text="-"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnsimpan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvtanggal"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/btncustom2"
+        android:text="SIMPAN"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:textSize="14sp"/>
+
+    <Button
+        android:id="@+id/btntanggal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvtanggal"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:paddingRight="8dp"
+        android:paddingLeft="8dp"
+        android:layout_toLeftOf="@id/btnsimpan"
+        android:background="@drawable/btncustom2"
+        android:text="pilih tanggal"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:textSize="14sp"/>
+
+
+</RelativeLayout>

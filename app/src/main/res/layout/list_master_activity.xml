@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+xmlns:card_view="http://schemas.android.com/apk/res-auto"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+card_view:cardCornerRadius="10dp"
+card_view:cardElevation="5dp"
+card_view:cardUseCompatPadding="true">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/nama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="5dp"
+            android:text="ACHMAD"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tanggal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nama"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="3dp"
+            android:text="01-03-2021"
+            android:textColor="#000"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/bag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tanggal"
+            android:textColor="#000"
+            android:textSize="15dp"
+            android:text="Bagian : "
+            android:layout_marginLeft="5dp" />
+
+        <TextView
+            android:id="@+id/bagian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tanggal"
+            android:layout_toRightOf="@id/bag"
+            android:textColor="#000"
+            android:textSize="15dp"
+            android:text="IT"
+            android:layout_marginRight="3dp" />
+
+        <TextView
+            android:id="@+id/jab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tanggal"
+            android:layout_toRightOf="@id/bagian"
+            android:textColor="#000"
+            android:textSize="15dp"
+            android:text="Jabatan : "
+            android:layout_marginLeft="5dp"/>
+        <TextView
+            android:id="@+id/jabatan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tanggal"
+            android:layout_toRightOf="@id/jab"
+            android:textColor="#000"
+            android:textSize="15dp"
+            android:text="Staff"
+            android:layout_marginRight="3dp" />
+
+        <TextView
+            android:id="@+id/create"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/jabatan"
+            android:textColor="#000"
+            android:textSize="15dp"
+            android:text="Dibuat Oleh : "
+            android:layout_marginLeft="5dp"/>
+
+        <TextView
+            android:id="@+id/createby"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/jabatan"
+            android:layout_toRightOf="@id/create"
+            android:textColor="#000"
+            android:textSize="15dp"
+            android:text="Arif123"
+            android:layout_marginRight="3dp" />
+
+        <TextView
+            android:id="@+id/stats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/createby"
+            android:textColor="#000"
+            android:textSize="15dp"
+            android:text="Status : "
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="5dp"/>
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/createby"
+            android:layout_toRightOf="@id/stats"
+            android:textColor="#000"
+            android:textSize="15dp"
+            android:text="Belum Di Cek"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="5dp" />
+
+        <TextView
+            android:id="@+id/check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/status"
+            android:textColor="#000"
+            android:textSize="15dp"
+            android:text="Dicek Oleh : "
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="5dp"/>
+
+        <TextView
+            android:id="@+id/checkby"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/status"
+            android:layout_toRightOf="@id/check"
+            android:textColor="#000"
+            android:textSize="15dp"
+            android:text="Belum Di Cek"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="5dp" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/checkby"
+            android:textColor="#000"
+            android:textSize="15dp"
+            android:text="Dicek Tanggal : "
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="5dp"/>
+
+        <TextView
+            android:id="@+id/checkdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/checkby"
+            android:layout_toRightOf="@id/date"
+            android:textColor="#000"
+            android:textSize="15dp"
+            android:text="Belum Di Cek"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="5dp" />
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

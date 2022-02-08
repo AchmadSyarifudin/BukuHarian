@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#90000000">
+
+    <TextView
+        android:id="@+id/tvid"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="ID"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/edid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@id/tvid"
+        android:background="#FFFF00"
+        android:enabled="false"
+        android:paddingLeft="10dp"
+        android:text=""
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvnama"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Nama"
+        android:layout_below="@id/edid"
+        android:layout_marginTop="3dp"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/ednama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@id/tvid"
+        android:layout_below="@id/edid"
+        android:layout_marginTop="3dp"
+        android:background="#FFFF00"
+        android:enabled="false"
+        android:paddingLeft="10dp"
+        android:text=""
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+        <TextView
+        android:id="@+id/tvpassword"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ednama"
+        android:layout_marginTop="3dp"
+        android:text="Password"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/edpassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_below="@id/ednama"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@id/tvpassword"
+        android:background="#FFFFFF"
+        android:paddingLeft="10dp"
+        android:hint="Password"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvdivisi"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Divisi"
+        android:layout_below="@id/edpassword"
+        android:layout_marginTop="3dp"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/eddivisi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@id/tvid"
+        android:layout_below="@id/edpassword"
+        android:layout_marginTop="3dp"
+        android:background="#FFFF00"
+        android:enabled="false"
+        android:paddingLeft="10dp"
+        android:text=""
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvspv"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Supervisi"
+        android:layout_below="@id/eddivisi"
+        android:layout_marginTop="3dp"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/edspv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@id/tvid"
+        android:layout_below="@id/eddivisi"
+        android:layout_marginTop="3dp"
+        android:background="#FFFF00"
+        android:enabled="false"
+        android:paddingLeft="10dp"
+        android:text=""
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvalamat"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Alamat"
+        android:layout_below="@id/edspv"
+        android:layout_marginTop="3dp"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/edalamat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@id/tvid"
+        android:layout_below="@id/edspv"
+        android:layout_marginTop="3dp"
+        android:background="#FFFF00"
+        android:enabled="false"
+        android:paddingLeft="10dp"
+        android:text=""
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvlokasi"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Lokasi"
+        android:layout_below="@id/edalamat"
+        android:layout_marginTop="3dp"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/edlokasi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@id/tvid"
+        android:layout_below="@id/edalamat"
+        android:layout_marginTop="3dp"
+        android:background="#FFFF00"
+        android:enabled="false"
+        android:paddingLeft="10dp"
+        android:text=""
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edlokasi"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnlokasi"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btncustom2"
+            android:text="Cek Lokasi"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:textSize="14sp"/>
+
+        <Button
+            android:id="@+id/btnlokasi2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btncustom2"
+            android:layout_marginLeft="10dp"
+            android:text="ubah lokasi"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:textSize="14sp"/>
+
+        <Button
+            android:id="@+id/btnupdate"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btncustom2"
+            android:layout_marginLeft="10dp"
+            android:text="update"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
