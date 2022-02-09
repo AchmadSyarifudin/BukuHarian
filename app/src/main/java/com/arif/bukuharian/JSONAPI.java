@@ -45,22 +45,17 @@ public interface JSONAPI {
     @FormUrlEncoded
     @POST("insertrencana.php")
     Call<ResponseBody> postRencana(@Field("kode") String kode,
-                                 @Field("uraian") String uraian);
+                                   @Field("uraian") String uraian,
+                                   @Field("id") String id);
 
     @FormUrlEncoded
     @POST("updatehasil.php")
-    Call<ResponseBody> updateHasil(  @Field("Kodex") String Kodex,
-                                     @Field("Jamx") String Jamx,
-                                     @Field("Hasilx") String Hasilx,
-                                     @Field("Jumlahx") String Jumlahx,
-                                     @Field("Satuanx") String Satuanx,
-                                     @Field("Keteranganx") String Keteranganx,
-                                     @Field("Kode") String Kode,
-                                 @Field("Jam") String Jam,
-                                 @Field("Hasil") String Hasil,
-                                 @Field("Jumlah") String Jumlah,
-                                 @Field("Satuan") String Satuan,
-                                 @Field("Keterangan") String Keterangan);
+    Call<ResponseBody> updateHasil(  @Field("kode") String kode,
+                                     @Field("aktifitas") String uraian,
+                                     @Field("hasil") String hasil,
+                                     @Field("jam") String jam,
+                                     @Field("jumlah") String jumlah,
+                                     @Field("keterangan") String keterangan);
 
     @FormUrlEncoded
     @POST("updateakun.php")
