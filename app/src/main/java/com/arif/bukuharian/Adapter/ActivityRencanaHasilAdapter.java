@@ -61,11 +61,19 @@ public class ActivityRencanaHasilAdapter extends BaseAdapter {
 
         ActivityRencanaHasilData data = items.get(position);
 
-        uraian.setText(data.getAktifitas());
+        if(data.getAktifitas()==null){
+            uraian.setText("Belum Dikerjakan");
+        } else {
+            uraian.setText(data.getAktifitas());
+        }
+        if(data.getHasil()==null){
+            hasil.setText("0%");
+        } else {
+            hasil.setText(data.getHasil()+"%");
+        }
         task.setText(data.getTaskList());
         jam.setText(data.getJamAwal());
         jumlah.setText(data.getJml());
-        hasil.setText(data.getHasil()+"%");
         keterangan.setText(data.getKeterangan());
         disposisi.setText(data.getDisposisi());
         return convertView;

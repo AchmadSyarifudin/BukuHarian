@@ -134,8 +134,9 @@ public class MainActivity2 extends AppCompatActivity {
                 final String jml = daftarrencana.get(position).getJml();
                 final String keterangan = daftarrencana.get(position).getKeterangan();
                 final String disposisi = daftarrencana.get(position).getDisposisi();
+                final String createby = daftarrencana.get(position).getCreateBy();
 
-                DialogForm3(kode,uraian,task,hasil,jam,jml,keterangan,disposisi);
+                DialogForm3(kode,uraian,task,hasil,jam,jml,keterangan,disposisi,createby);
 
             }
         });
@@ -182,6 +183,7 @@ public class MainActivity2 extends AppCompatActivity {
                         item.setDisposisi(post.getDisposisi());
                         item.setCloseDate(post.getCloseDate());
                         item.setCloseBy(post.getCloseBy());
+                        item.setCreateBy(post.getCreateBy());
 
                         daftarrencana.add(item);
                     }
@@ -200,113 +202,6 @@ public class MainActivity2 extends AppCompatActivity {
         });
 
     }
-
-    public void getHasil(){
-        daftarhasil.clear();
-        hasilAdapter.notifyDataSetChanged();
-        Call<List<ActivityHasilData>> call = jsonapi.getActivityHasil(kode);
-
-        call.enqueue(new Callback<List<ActivityHasilData>>() {
-            @Override
-            public void onResponse(Call<List<ActivityHasilData>> call, retrofit2.Response<List<ActivityHasilData>> response) {
-                DecimalFormat df = new DecimalFormat("###,###,###,###,###.##");
-                if(response.isSuccessful()){
-                    List<ActivityHasilData> posts = response.body();
-
-                    for (ActivityHasilData post: posts){
-                        ActivityHasilData item = new ActivityHasilData();
-
-                        item.setKd_Act(post.getKd_Act());
-                        item.setJam(post.getJam());
-                        item.setHasilKerja(post.getHasilKerja());
-                        item.setJml(post.getJml());
-                        item.setSatuan(post.getSatuan());
-                        item.setKeterangan(post.getKeterangan());
-                        item.setDisposisi(post.getDisposisi());
-
-                        daftarhasil.add(item);
-                    }
-                    hasilAdapter.notifyDataSetChanged();
-
-                } else {
-                    Toast.makeText(MainActivity2.this,"Data Tidak Ditemukan",Toast.LENGTH_SHORT).show();
-                }
-
-            }
-
-            @Override
-            public void onFailure(Call<List<ActivityHasilData>> call, Throwable t) {
-                Toast.makeText(MainActivity2.this,"Gagal ambil data, Silahkan cek koneksi dan refresh data",Toast.LENGTH_LONG).show();
-            }
-        });
-
-    }
-
-//    private void DialogForm() {
-//
-//        AlertDialog.Builder dialog = new AlertDialog.Builder(MainActivity2.this);
-//        LayoutInflater inflater = getLayoutInflater();
-//        final View dialogView = inflater.inflate(R.layout.form_insert_hasil, null);
-//        dialog.setView(dialogView);
-//        dialog.setCancelable(true);
-//        dialog.setIcon(R.mipmap.fbr);
-//        dialog.setTitle(" Isi Laporan Hasil Kerja : ");
-//
-//        EditText kodex = (EditText) dialogView.findViewById(R.id.edkode);
-//        TextView jam = (TextView) dialogView.findViewById(R.id.edjam);
-//        EditText hasil = (EditText) dialogView.findViewById(R.id.edhasil);
-//        EditText jumlah = (EditText) dialogView.findViewById(R.id.edjumlah);
-//        EditText satuan = (EditText) dialogView.findViewById(R.id.edsatuan);
-//        EditText keterangan = (EditText) dialogView.findViewById(R.id.edketerangan);
-//        Button simpan = (Button) dialogView.findViewById(R.id.btnsimpan);
-//
-//        final AlertDialog alert = dialog.create();
-//        alert.setView(dialogView);
-//
-////        if(kodejabatan.equals("jt02")){
-////            SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
-////            String currentDateandTime = sdf.format(new Date());
-////            jam.setText(currentDateandTime);
-////            jam.setEnabled(false);
-////
-////        }
-//        kodex.setText(kode);
-//
-//        jam.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                showTimeDialog(jam);
-//            }
-//        });
-//
-//        simpan.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if(hasil.getText().toString().trim().equals("")){
-//                    hasil.setError("Kolom Tidak Boleh Kosong");
-//                } else {
-//                    if(jumlah.getText().toString().trim().equals("")){
-//                        jumlah.setError("Kolom Tidak Boleh Kosong");
-//                    } else {
-//                        if(satuan.getText().toString().trim().equals("")){
-//                            satuan.setError("Kolom Tidak Boleh Kosong");
-//                        } else {
-//                            if(keterangan.getText().toString().trim().equals("")){
-//                                keterangan.setError("Kolom Tidak Boleh Kosong");
-//                            } else {
-//                                postHasil(kodex.getText().toString(),jam.getText().toString(),hasil.getText().toString(),
-//                                        jumlah.getText().toString(),satuan.getText().toString(),keterangan.getText().toString());
-//                                alert.dismiss();
-//                            }
-//                        }
-//                    }
-//                }
-//
-//            }
-//        });
-//
-//        alert.show();
-//    }
 
     private void DialogForm2(final String kodex,final String uraianx,final String taskx,final String hasilx,
                              final String jamx,final String jmlx,final String ketx,final String disposisix) {
@@ -376,7 +271,8 @@ public class MainActivity2 extends AppCompatActivity {
     }
 
     private void DialogForm3(final String kodex,final String uraianx,final String taskx,final String hasilx,
-                             final String jamx,final String jmlx,final String ketx,final String disposisix) {
+                             final String jamx,final String jmlx,final String ketx,final String disposisix,
+                             final String createbyx) {
 
         AlertDialog.Builder dialog = new AlertDialog.Builder(MainActivity2.this);
         LayoutInflater inflater = getLayoutInflater();
@@ -404,7 +300,11 @@ public class MainActivity2 extends AppCompatActivity {
         hapus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DialogForm4(kodex,taskx);
+                if(createbyx.equals(id)) {
+                    DialogForm4(kodex, taskx);
+                } else {
+
+                }
                 alert.dismiss();
             }
         });
@@ -469,78 +369,6 @@ public class MainActivity2 extends AppCompatActivity {
         });
 
         alert.show();
-    }
-
-    private void DialogForm6() {
-
-        AlertDialog.Builder dialog = new AlertDialog.Builder(MainActivity2.this);
-        LayoutInflater inflater = getLayoutInflater();
-        final View dialogView = inflater.inflate(R.layout.form_pilih_hasil2, null);
-        dialog.setView(dialogView);
-        dialog.setCancelable(true);
-        dialog.setIcon(R.mipmap.fbr);
-        dialog.setTitle(" Pilih Tindakan : ");
-
-        Button rencana = (Button) dialogView.findViewById(R.id.btnrencana);
-        Button hasil = (Button) dialogView.findViewById(R.id.btnhasil);
-
-        final AlertDialog alert = dialog.create();
-        alert.setView(dialogView);
-
-        rencana.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                DialogForm5();
-                alert.dismiss();
-            }
-        });
-
-        hasil.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                DialogForm();
-                alert.dismiss();
-            }
-        });
-
-        alert.show();
-    }
-
-
-    public void postHasil(final String Kode,final String Jam,final String Hasil,final String Jumlah,final String Satuan,final String Keterangan){
-
-        Call<ResponseBody> call = jsonapi.postHasil(Kode,Jam,Hasil,Jumlah,Satuan,Keterangan,lat,lon);
-
-        call.enqueue(new Callback<ResponseBody>() {
-            @Override
-            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-
-                if (response.isSuccessful()) {
-                    try {
-                        JSONObject jobj = new JSONObject(response.body().string());
-                        if (jobj.getString("success").equals("1")){
-
-                            Toast.makeText(MainActivity2.this, "Laporan Berhasil Dibuat", Toast.LENGTH_SHORT).show();
-                            getHasil();
-
-                        } else {
-                            // Jika login gagal
-                            Toast.makeText(MainActivity2.this,"Gagal Buat Laporan", Toast.LENGTH_SHORT).show();
-
-                        }
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
-
-            @Override
-            public void onFailure(Call<ResponseBody> call, Throwable t) {
-                Toast.makeText(MainActivity2.this,"Gagal Buat Laporan", Toast.LENGTH_SHORT).show();
-            }
-        });
     }
 
     public void postRencana(final String uraian){
@@ -615,9 +443,8 @@ public class MainActivity2 extends AppCompatActivity {
         });
     }
 
-    public void hapusHasil(final String Kode,final String Jam,final String Hasil,final String Jumlah,final String Satuan,final String Keterangan){
-
-        Call<ResponseBody> call = jsonapi.hapusHasil(Kode,Jam,Hasil,Jumlah,Satuan,Keterangan);
+    public void hapusHasil(final String Kode){
+        Call<ResponseBody> call = jsonapi.hapusRencana(Kode);
 
         call.enqueue(new Callback<ResponseBody>() {
             @Override
@@ -628,12 +455,12 @@ public class MainActivity2 extends AppCompatActivity {
                         JSONObject jobj = new JSONObject(response.body().string());
                         if (jobj.getString("success").equals("1")){
 
-                            Toast.makeText(MainActivity2.this, "Laporan Berhasil Dihapus", Toast.LENGTH_SHORT).show();
-                            getHasil();
+                            Toast.makeText(MainActivity2.this, "Rencana Kerja Telah Dihapus", Toast.LENGTH_SHORT).show();
+                            getRencana();
 
                         } else {
                             // Jika login gagal
-                            Toast.makeText(MainActivity2.this,"Gagal Hapus Laporan", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity2.this,"Gagal Hapus Rencana Kerja", Toast.LENGTH_SHORT).show();
 
                         }
                     } catch (JSONException e) {
@@ -646,9 +473,63 @@ public class MainActivity2 extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
-                Toast.makeText(MainActivity2.this,"Gagal Hapus Laporan", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity2.this,"Gagal Hapus Rencana Kerja", Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    public void getCreator(){
+
+        Call<ResponseBody> call = jsonapi.getCreator(id);
+
+        call.enqueue(new Callback<ResponseBody>() {
+            @Override
+            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+
+                if (response.isSuccessful()) {
+                    try {
+                        JSONObject jobj = new JSONObject(response.body().string());
+                        if (jobj.getString("success").equals("1")){
+                            final String nama = jobj.getString("success");
+                            DialogForm1("1",nama);
+                        } else {
+                            DialogForm1("1","");
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponseBody> call, Throwable t) {
+                Toast.makeText(MainActivity2.this,"Gagal Buat Rencana Kerja", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    private void DialogForm1(final String status,final String nama) {
+        AlertDialog.Builder dialog2 = new AlertDialog.Builder(MainActivity2.this);
+        LayoutInflater inflater2 = getLayoutInflater();
+        dialog2.setCancelable(true);
+        dialog2.setIcon(R.mipmap.fbr);
+        if(status.equals("1")) {
+            dialog2.setTitle("Anda Bukan Pembuat Rencana Kerja Ini, Rencana Kerja Hanya Dapat Dihapus Oleh Pembuat Rencana Kerja (" + nama + ")");
+        } else {
+            dialog2.setTitle("Anda Bukan Pembuat Rencana Kerja Ini, Rencana Kerja Hanya Dapat Dihapus Oleh Pembuat Rencana Kerja ");
+        }
+        dialog2.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+
+
+        dialog2.show();
     }
 
     private void showTimeDialog(final TextView tvjam) {
@@ -682,5 +563,7 @@ public class MainActivity2 extends AppCompatActivity {
 
         timePickerDialog.show();
     }
+
+
 
 }

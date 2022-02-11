@@ -2,12 +2,16 @@ package com.arif.bukuharian.Model;
 
 public class ActivityRencanaHasilData {
     private String Kode_Act, NoItem,KodeTaskList, TaskList, Aktifitas, JamAwal, JamAkhir, Hasil,
-            Jml, Keterangan, RClose, IsClose, Approve, Disposisi, CloseDate, CloseBy;
+            Jml, Keterangan, RClose, IsClose, Approve, Disposisi, CloseDate, CloseBy,CreateBy;
 
     public ActivityRencanaHasilData(){
     }
 
-    public ActivityRencanaHasilData(String kode_Act, String noItem, String kodeTaskList, String taskList, String aktifitas, String jamAwal, String jamAkhir, String hasil, String jml, String keterangan, String RClose, String isClose, String approve, String disposisi, String closeDate, String closeBy) {
+    public ActivityRencanaHasilData(String kode_Act, String noItem, String kodeTaskList, String taskList,
+                                    String aktifitas, String jamAwal, String jamAkhir, String hasil,
+                                    String jml, String keterangan, String RClose, String isClose,
+                                    String approve, String disposisi, String closeDate, String closeBy,
+                                    String createBy) {
         Kode_Act = kode_Act;
         NoItem = noItem;
         KodeTaskList = kodeTaskList;
@@ -24,6 +28,7 @@ public class ActivityRencanaHasilData {
         Disposisi = disposisi;
         CloseDate = closeDate;
         CloseBy = closeBy;
+        CreateBy = createBy;
     }
 
     public String getKode_Act() {
@@ -152,5 +157,13 @@ public class ActivityRencanaHasilData {
 
     public void setCloseBy(String closeBy) {
         CloseBy = closeBy;
+    }
+
+    public String getCreateBy() {
+        return CreateBy;
+    }
+
+    public void setCreateBy(String createBy) {
+        CreateBy = createBy;
     }
 }

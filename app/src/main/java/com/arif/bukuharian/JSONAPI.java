@@ -63,13 +63,8 @@ public interface JSONAPI {
                                      @Field("password") String password);
 
     @FormUrlEncoded
-    @POST("hapushasil.php")
-    Call<ResponseBody> hapusHasil(@Field("Kode") String Kode,
-                                   @Field("Jam") String Jam,
-                                   @Field("Hasil") String Hasil,
-                                   @Field("Jumlah") String Jumlah,
-                                   @Field("Satuan") String Satuan,
-                                   @Field("Keterangan") String Keterangan);
+    @POST("hapusrencana.php")
+    Call<ResponseBody> hapusRencana(@Field("Kode") String Kode);
 
     @GET("selectactivitymaster.php?")
     Call<List<ActivityMasterData>> getActivityMaster(@Query("id") String id,
@@ -93,6 +88,10 @@ public interface JSONAPI {
                                  @Field("divisi") String divisi,
                                  @Field("id") String id,
                                  @Field("nama") String nama);
+
+    @FormUrlEncoded
+    @POST("selectcreator.php")
+    Call<ResponseBody> getCreator(@Field("id") String id);
 
     @FormUrlEncoded
     @POST("updatemaster.php")

@@ -29,9 +29,9 @@
             android:layout_below="@+id/task"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="3dp"
-            android:text="Hasil Kerja"
+            android:text="Hasil"
             android:textColor="#0000ff"
-            android:textSize="16dp"
+            android:textSize="12dp"
             android:textStyle="bold" />
 
         <TextView

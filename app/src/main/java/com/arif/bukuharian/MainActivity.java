@@ -84,11 +84,6 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        Intent objIntent = getIntent();
-//        id = objIntent.getStringExtra("ID");
-//        nama = objIntent.getStringExtra("Nama");
-//        kodejabatan = objIntent.getStringExtra("KodeJabatan");
-//        supervisorid = objIntent.getStringExtra("SupervisorID");
 
         findViewById();
 
@@ -443,38 +438,6 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         //kode=area.substring(0,2)+"/"+devid+"/SP/"+currentYear+"/"+kdbln+kdhari;
         String kode = idpegawai + "/TL/" + currentYear + "/" + kdbln+kdhari;
         DialogCreateMaster(kode);
-    }
-
-    public void getKode(final String kode){
-
-        Call<ResponseBody> call = jsonapi.getKodeRencana(kode);
-
-        call.enqueue(new Callback<ResponseBody>() {
-            @Override
-            public void onResponse(Call<ResponseBody> call, retrofit2.Response<ResponseBody> response) {
-
-                if (response.isSuccessful()) {
-                    try {
-                        JSONObject jobj = new JSONObject(response.body().string());
-
-                        String last = jobj.getString("last");
-                        String kdnota = kode + last;
-//                        DialogCreateMaster(kdnota);
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                } else {
-                    Toast.makeText(MainActivity.this,"Gagal Buat Daftar Rencana Baru, Cek koneksi Atatu Hubungi Admin",Toast.LENGTH_SHORT).show();
-                }
-            }
-
-            @Override
-            public void onFailure(Call<ResponseBody> call, Throwable t) {
-                Toast.makeText(MainActivity.this,"Gagal Buat Daftar Rencana Baru, Cek koneksi Atatu Hubungi Admin",Toast.LENGTH_SHORT).show();
-            }
-        });
     }
 
     public void getPegawai(){
@@ -1041,6 +1004,8 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
                         tvtanggal.setText(dateFormatter3.format(newDate.getTime()));
                         tvtglakhir.setText(dateFormatter4.format(newDate.getTime()));
                         tglak = dateFormatter3.format(newDate.getTime());
+
+
                     }
 
                 },newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));

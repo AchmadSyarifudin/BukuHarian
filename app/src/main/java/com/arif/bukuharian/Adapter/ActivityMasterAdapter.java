@@ -14,6 +14,7 @@ import com.arif.bukuharian.Model.ActivityMasterData;
 import com.arif.bukuharian.R;
 
 import java.text.DecimalFormat;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -40,6 +41,10 @@ public class ActivityMasterAdapter extends BaseAdapter {
     @Override
     public long getItemId(int position) {
         return position;
+    }
+
+    public List<ActivityMasterData> getAllData(){
+        return items;
     }
 
     @Override
